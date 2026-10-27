@@ -607,6 +607,76 @@ a:hover { color: var(--brand-dark); }
 
 /* --- Fußzeile ------------------------------------------------------------- */
 
+/* Leistungsseiten */
+
+.crumbs {
+  font-size: 14px;
+  color: var(--muted);
+  margin-bottom: var(--space-4);
+}
+.crumbs a { text-decoration: none; }
+.crumbs a:hover { text-decoration: underline; }
+.crumbs span { margin-inline: var(--space-2); }
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-8);
+}
+.checklist li {
+  display: flex;
+  gap: var(--space-3);
+  align-items: flex-start;
+}
+.checklist svg {
+  flex: 0 0 auto;
+  color: var(--brand);
+  margin-top: 4px;
+}
+
+/* Ablaufschritte auf hellem Grund */
+.steps--light .steps__num {
+  background: var(--brand);
+  color: var(--on-brand);
+}
+.steps--light .steps__text { color: var(--ink-2); }
+
+.cta {
+  background: var(--brand-dark);
+  color: var(--on-brand);
+  padding-block: var(--space-14);
+}
+.cta__inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6) var(--space-10);
+  align-items: center;
+  justify-content: space-between;
+}
+.cta h2 { color: var(--on-brand); }
+.cta__lead {
+  margin-top: var(--space-3);
+  color: var(--on-dark-mute);
+  max-width: 46ch;
+}
+.cta__actions { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-10) var(--space-14);
+  align-items: center;
+}
+.split__text { flex: 999 1 420px; min-width: 0; }
+.split__media { flex: 1 1 360px; min-width: 0; }
+.split h2 { margin-bottom: var(--space-5); }
+.split p { color: var(--muted); max-width: 54ch; }
+.split p + p { margin-top: var(--space-4); }
+
+@media (max-width: 760px) {
+  .checklist { grid-template-columns: 1fr; }
+}
+
 /* Textseiten: Impressum, Datenschutz */
 
 .pagehead {

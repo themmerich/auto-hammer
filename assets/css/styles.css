@@ -250,6 +250,19 @@ a:hover { color: var(--brand-dark); }
 .photo--wide { aspect-ratio: 16 / 9; }
 .photo--flat { aspect-ratio: 21 / 9; }
 
+/* Ein echtes Foto steht an derselben Stelle und im selben Rahmen wie der
+   Platzhalter, fuellt ihn aber aus. Breite und Hoehe stehen am img, damit
+   beim Laden nichts springt. */
+img.photo {
+  display: block;
+  width: 100%;
+  /* Ohne height:auto gewinnt das height-Attribut des img gegen
+     aspect-ratio, und das Bild wird so hoch wie das Original. */
+  height: auto;
+  padding: 0;
+  object-fit: cover;
+}
+
 /* --- Kopfzeile ------------------------------------------------------------ */
 
 .topbar {
@@ -282,23 +295,25 @@ a:hover { color: var(--brand-dark); }
 
 .logo {
   display: flex;
-  align-items: center;
-  gap: var(--space-3);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
   text-decoration: none;
   color: inherit;
 }
-.logo__mark { flex: 0 0 auto; color: var(--brand); }
-.logo__name {
-  display: block;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 21px;
-  letter-spacing: -0.01em;
-  color: var(--brand);
+/* Das Logo traegt den Claim bereits im Bild, dort aber zu klein zum Lesen.
+   Deshalb wird die untere Kante abgeschnitten und der Claim als Text
+   darunter gesetzt. */
+.logo__img {
+  width: 190px;
+  height: 68px;
+  object-fit: cover;
+  object-position: top center;
 }
 .logo__claim {
   display: block;
   font-size: 11px;
+  letter-spacing: 0.01em;
   color: var(--muted);
 }
 
@@ -808,6 +823,9 @@ a:hover { color: var(--brand-dark); }
 
 @media (max-width: 560px) {
   body { padding-bottom: 68px; }
+
+  .logo__img { width: 150px; height: 54px; }
+  .logo__claim { font-size: 10px; }
 
   .hero__actions .btn,
   .emergency .btn { width: 100%; }

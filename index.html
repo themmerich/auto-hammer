@@ -34,16 +34,8 @@
 <header class="header">
   <div class="container header__inner">
     <a class="logo" href="/">
-      <!-- Ersetzen durch die Logodatei des Betriebs, sobald sie vorliegt. -->
-      <svg class="logo__mark" width="34" height="34" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M3 15.5V12l2.2-5.2A2 2 0 0 1 7.04 5.6h9.92a2 2 0 0 1 1.84 1.2L21 12v3.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M3 15.5h18v2.1a.9.9 0 0 1-.9.9h-1.7a.9.9 0 0 1-.9-.9v-1.1M6.5 16.5v1.1a.9.9 0 0 1-.9.9H3.9a.9.9 0 0 1-.9-.9V15.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        <path d="M5.6 12h12.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-      </svg>
-      <span>
-        <span class="logo__name">AUTO HAMMER</span>
-        <span class="logo__claim">Karosserie- und Lackierfachbetrieb</span>
-      </span>
+      <img class="logo__img" src="assets/img/logo-auto-hammer.png" width="650" height="300" alt="Auto Hammer">
+      <span class="logo__claim">Karosserie- und Lackierfachbetrieb</span>
     </a>
 
     <nav class="nav" aria-label="Hauptnavigation">
@@ -78,9 +70,9 @@
         </div>
       </div>
       <div class="hero__media">
-        <figure class="photo">
-          <figcaption class="photo__note">Foto: Lackierkabine</figcaption>
-        </figure>
+        <img class="photo" src="assets/img/lack-lackierkabine.jpg" width="1920" height="1277"
+             alt="Lackierer im Schutzanzug lackiert eine blaue Heckklappe in der Lackierkabine"
+             fetchpriority="high" decoding="async">
       </div>
     </div>
   </section>
@@ -105,9 +97,9 @@
 
       <a class="lead-service" href="unfall.html">
         <span class="lead-service__media">
-          <span class="photo">
-            <span class="photo__note">Foto: Richtbank</span>
-          </span>
+          <img class="photo" src="assets/img/unfall-2.jpg" width="1920" height="1277"
+               alt="Dunkler Kombi in der Werkstatthalle, die vordere Tür ist für die Instandsetzung ausgebaut"
+               loading="lazy" decoding="async">
         </span>
         <span class="lead-service__body">
           <span class="lead-service__title">Unfallinstandsetzung</span>
@@ -222,27 +214,27 @@
       </div>
       <div class="news">
         <a class="news__item" href="#kontakt">
-          <figure class="photo photo--wide">
-            <figcaption class="photo__note">Foto: Reifenwechsel</figcaption>
-          </figure>
+          <img class="photo photo--wide" src="assets/img/news-reifenwechsel.jpg" width="1250" height="832"
+               alt="Mitarbeiter hebt einen Winterreifen an das Fahrzeug"
+               loading="lazy" decoding="async">
           <span class="news__body">
             <span class="news__date num">Sa. 24.10. und Sa. 07.11.</span>
             <span class="news__title">Reifenwechseltage ohne Wartezeit</span>
           </span>
         </a>
         <a class="news__item" href="#kontakt">
-          <figure class="photo photo--wide">
-            <figcaption class="photo__note">Foto: Wintercheck</figcaption>
-          </figure>
+          <img class="photo photo--wide" src="assets/img/news-wintercheck.jpg" width="1140" height="581"
+               alt="Mechaniker prüft unter der geöffneten Motorhaube den Ölstand"
+               loading="lazy" decoding="async">
           <span class="news__body">
             <span class="news__date">Jetzt im Haus</span>
             <span class="news__title">Wintercheck für alle Marken und Modelle</span>
           </span>
         </a>
         <a class="news__item" href="#kontakt">
-          <figure class="photo photo--wide">
-            <figcaption class="photo__note">Foto: Team</figcaption>
-          </figure>
+          <img class="photo photo--wide" src="assets/img/news-adrian-thiele.png" width="768" height="511"
+               alt="Übergabe einer Mappe an den neuen Auszubildenden in der Serviceannahme"
+               loading="lazy" decoding="async">
           <span class="news__body">
             <span class="news__date">Neu im Team</span>
             <span class="news__title">Willkommen im Team, Adrian</span>

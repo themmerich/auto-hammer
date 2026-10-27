@@ -2,6 +2,29 @@
    Oberhalb der Umbruchbreite steht die Liste per CSS ohnehin offen,
    deshalb wird der Zustand beim Vergrößern zurückgesetzt. */
 
+/* Misst die Höhe des mitlaufenden Kopfes und schreibt sie nach --header-h.
+   Das Stylesheet hält damit den Platz frei, den ein Ankersprung braucht.
+   Ohne JavaScript gilt der feste Wert aus dem Stylesheet. */
+
+(function () {
+  var header = document.querySelector('.header');
+  if (!header) return;
+
+  function syncHeaderHeight() {
+    var mitlaufend = getComputedStyle(header).position === 'sticky';
+    var hoehe = mitlaufend ? Math.round(header.getBoundingClientRect().height) : 0;
+    document.documentElement.style.setProperty('--header-h', hoehe + 'px');
+  }
+
+  syncHeaderHeight();
+  window.addEventListener('resize', syncHeaderHeight);
+
+  // Die Schriften ändern die Höhe des Kopfes, sobald sie geladen sind.
+  if (document.fonts && document.fonts.ready) {
+    document.fonts.ready.then(syncHeaderHeight);
+  }
+})();
+
 (function () {
   var toggle = document.getElementById('nav-toggle');
   var list = document.getElementById('nav-list');

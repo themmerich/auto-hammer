@@ -280,11 +280,22 @@
         </div>
       </div>
       <div class="contact__media">
-        <!-- Ersetzen durch die Karte des gewünschten Anbieters (OpenStreetMap-iframe
-             oder eine statische Karte mit Link auf die Route). -->
-        <figure class="photo">
-          <figcaption class="photo__note">Karte: Anfahrt</figcaption>
-        </figure>
+        <!-- Zwei-Klick-Lösung: Die Karte wird erst auf Klick von OpenStreetMap
+             geladen. Vorher verlässt keine Anfrage den Server, es wird also
+             auch keine IP-Adresse an Dritte übermittelt. Ohne JavaScript
+             erscheint der Knopf gar nicht, nur der Link darunter. -->
+        <div class="map" data-map="https://www.openstreetmap.org/export/embed.html?bbox=10.0272%2C49.7887%2C10.0362%2C49.7923&amp;layer=mapnik&amp;marker=49.7904602%2C10.0317305">
+          <div class="map__teaser">
+            <div class="map__consent" hidden>
+              <p class="map__text">Die Karte wird von OpenStreetMap geladen. Dabei wird Ihre IP-Adresse an den Anbieter übermittelt.</p>
+              <button class="btn btn--solid" type="button" data-map-load>Karte laden</button>
+            </div>
+            <p class="map__links">
+              <a href="https://www.openstreetmap.org/?mlat=49.7904602&amp;mlon=10.0317305#map=17/49.79046/10.03173"
+                 target="_blank" rel="noopener">Standort auf OpenStreetMap ansehen</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </section>

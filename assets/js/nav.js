@@ -25,6 +25,33 @@
   }
 })();
 
+/* Karte erst auf Klick laden. Der Knopf wird hier eingeblendet, damit
+   ohne JavaScript kein toter Knopf stehen bleibt; dann führt nur der Link
+   darunter zur Karte. */
+
+(function () {
+  var block = document.querySelector('[data-map]');
+  if (!block) return;
+
+  var consent = block.querySelector('.map__consent');
+  var button = block.querySelector('[data-map-load]');
+  if (!consent || !button) return;
+
+  consent.hidden = false;
+
+  button.addEventListener('click', function () {
+    var frame = document.createElement('iframe');
+    frame.src = block.getAttribute('data-map');
+    frame.title = 'Karte mit dem Standort von Auto Hammer in Rottendorf';
+    frame.loading = 'lazy';
+    frame.setAttribute('referrerpolicy', 'no-referrer');
+
+    block.textContent = '';
+    block.appendChild(frame);
+    frame.focus();
+  });
+})();
+
 (function () {
   var toggle = document.getElementById('nav-toggle');
   var list = document.getElementById('nav-list');

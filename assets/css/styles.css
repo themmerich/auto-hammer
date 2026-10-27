@@ -99,6 +99,9 @@
   --space-18: 76px;
 
   /* Maße */
+  /* Höhe des mitlaufenden Kopfes. Der Wert hier ist der Stand ohne
+     JavaScript; nav.js misst nach und schreibt den echten Wert. */
+  --header-h: 122px;
   --container: 1120px;
   --gutter:    32px;
   --radius:    6px;
@@ -179,6 +182,10 @@ a:hover { color: var(--brand-dark); }
 }
 
 .section { padding-block: var(--space-18); }
+
+/* Beim Sprung auf einen Anker schiebt sich sonst der mitlaufende Kopf über
+   die Überschrift, zu der gesprungen wurde. Der Abstand hält sie frei. */
+[id] { scroll-margin-top: calc(var(--header-h) + var(--space-4)); }
 
 .skip-link {
   position: absolute;
@@ -771,7 +778,9 @@ img.photo {
 /* --- Responsive ----------------------------------------------------------- */
 
 @media (max-width: 900px) {
-  :root { --gutter: 24px; --space-18: 56px; }
+  /* Hier läuft der Kopf nicht mit, er scrollt weg. Ein Sprungabstand in
+     Kopfhöhe würde nur eine Lücke über der Überschrift erzeugen. */
+  :root { --gutter: 24px; --space-18: 56px; --header-h: 0px; }
 
   .nav__toggle { display: inline-flex; }
 

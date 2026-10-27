@@ -101,7 +101,7 @@
   /* Maße */
   /* Höhe des mitlaufenden Kopfes. Der Wert hier ist der Stand ohne
      JavaScript; nav.js misst nach und schreibt den echten Wert. */
-  --header-h: 122px;
+  --header-h: 91px;
   --container: 1120px;
   --gutter:    32px;
   --radius:    6px;
@@ -308,14 +308,11 @@ img.photo {
   text-decoration: none;
   color: inherit;
 }
-/* Das Logo traegt den Claim bereits im Bild, dort aber zu klein zum Lesen.
-   Deshalb wird die untere Kante abgeschnitten und der Claim als Text
-   darunter gesetzt. */
+/* Querfassung des Logos: Hammer rechts neben dem Schriftzug, Claim nicht
+   im Bild. Der steht als Text darunter und bleibt dadurch lesbar. */
 .logo__img {
-  width: 190px;
-  height: 68px;
-  object-fit: cover;
-  object-position: top center;
+  width: 210px;
+  height: auto;
 }
 .logo__claim {
   display: block;
@@ -866,7 +863,7 @@ img.photo {
 @media (max-width: 560px) {
   body { padding-bottom: 68px; }
 
-  .logo__img { width: 150px; height: 54px; }
+  .logo__img { width: 165px; }
   .logo__claim { font-size: 10px; }
 
   .hero__actions .btn,

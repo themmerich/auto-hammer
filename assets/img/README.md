@@ -8,7 +8,18 @@ Größenvarianten.
 
 | Datei | Inhalt |
 |---|---|
-| `logo-auto-hammer.png` | Logo mit Schriftzug und Claim, 650 × 300 |
+| `logo-auto-hammer-quer.png` | **Im Kopf der Seiten im Einsatz.** Schriftzug mit Hammer rechts daneben, ohne Claim, 742 × 132 |
+| `logo-auto-hammer-quer-claim.png` | dieselbe Anordnung mit Trennlinie und Claim im Bild, 742 × 179 |
+| `logo-auto-hammer.png` | Originaldatei der alten Seite: Hammer über dem Wort, Claim im Bild, 650 × 300 |
+
+Die beiden Querfassungen sind aus der Originaldatei geschnitten und neu
+gesetzt. Zwischen Hammer, „AUTO", „HAMMER", Trennlinie und Claim liegen in
+der Vorlage durchgehend leere Pixelzeilen, die Schnittkanten waren deshalb
+eindeutig. Kopiert wurde Pixel für Pixel ohne Skalierung; Schattenkontur,
+Zweifarbigkeit und Transparenz entsprechen genau dem Original.
+
+Im Kopf steht der Claim als Text unter dem Logo, nicht im Bild. So bleibt er
+auf jedem Bildschirm lesbar und lässt sich einzeln ändern.
 
 ## Lackiererei
 

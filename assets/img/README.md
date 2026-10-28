@@ -1,8 +1,9 @@
 # Bilder
 
-Übernommen von der bisherigen Seite auto-hammer-ufr.de am 27.10.2026.
-Es sind die Originaldateien, nicht die von WordPress erzeugten
-Größenvarianten.
+Übernommen von der bisherigen Seite auto-hammer-ufr.de am 27.10.2026,
+jeweils die Originaldatei und nicht die von WordPress erzeugte
+Größenvariante. Für die Auslieferung sind sie inzwischen verkleinert
+und neu komprimiert, siehe unten.
 
 ## Marke
 
@@ -149,12 +150,53 @@ steht auch auf der Seite selbst.
 Diese Dateien liegen noch im Zwischenordner der Sitzung und lassen sich
 nachholen, solange die Sitzung besteht. Danach wieder von der alten Seite.
 
-## Noch zu tun
+## Größen und Fassungen
 
-Die Dateien sind unbearbeitet, meist 1920 px breit und zwischen 150 und
-900 KB groß. Für die Auslieferung im Netz gehören sie verkleinert und als
-WebP oder AVIF zusätzlich abgelegt, mit `srcset` für kleine Bildschirme.
-In dieser Form sind sie brauchbar, aber schwerer als nötig.
+Die Dateien von der alten Seite waren meist 1920 Pixel breit und
+unbearbeitet, zusammen rund 19 MB. Angezeigt wird nie etwas breiter als
+760 Pixel. Jede Datei ist deshalb auf ihre tatsächliche Verwendung
+verkleinert:
+
+| Art | Obergrenze | schmale Fassung |
+|---|---|---|
+| Fotos in Artikeln, Karten und Aufmachern | 1400 px | `-720` |
+| Porträts im Teamraster | 520 px | `-320` |
+| ZEEKR-Banner | 840 px | – |
+| Siegel | 480 px | – |
+| Gruppenbild `team-gesamt.png` | 1250 px | – |
+| Logo im Kopf | 480 px | – |
+
+Unberührt bleiben `logo-auto-hammer.png` als Vorlage für Favicon und
+Querfassung, `logo-auto-hammer-quer-claim.png`, `og.jpg`, `favicon.png`
+und `apple-touch-icon.png`.
+
+Welche Fassung geladen wird, entscheidet der Browser über `srcset` und
+`sizes` am Bild. Die `sizes`-Angabe beschreibt die Anzeigebreite an der
+jeweiligen Stelle:
+
+| Einbauort | sizes |
+|---|---|
+| Aufmacher der Startseite | `(max-width: 900px) calc(100vw - 48px), 45vw` |
+| Bild in einer Meldung | `(max-width: 820px) calc(100vw - 48px), 760px` |
+| Karte im Meldungsraster | `(max-width: 760px) calc(100vw - 48px), (max-width: 1180px) 32vw, 360px` |
+| Bild neben Text (`.split__media`) | `(max-width: 760px) calc(100vw - 48px), 45vw` |
+| Porträt im Teamraster | `(max-width: 760px) 45vw, (max-width: 900px) 30vw, 262px` |
+
+Wer das Layout ändert, muss diese Werte mit ändern. Sonst lädt der Browser
+eine Fassung, die nicht zur Anzeigegröße passt.
+
+## Symbole und Teilerbild
+
+`favicon.png` (48 px) und `apple-touch-icon.png` (180 px) zeigen das
+Hammerzeichen aus `logo-auto-hammer.png`, freigestellt und auf dem Blau
+der Marke. Auf Weiß wäre es unsichtbar: Der Hammer ist selbst weiß und hat
+nur eine dünne Kontur, die bei 48 Pixeln verschwindet.
+
+`og.jpg` ist der Ausschnitt 1200 × 630 aus `lack-lackierkabine.jpg`. Er
+erscheint beim Teilen von Seiten ohne eigenes Foto, also Übersicht,
+Impressum und Datenschutz.
+
+## Noch zu tun
 
 Für das Impressum fehlt noch der Bildnachweis: wer die Fotos gemacht hat
 und ob die Nutzung über die alte Seite hinaus abgedeckt ist.

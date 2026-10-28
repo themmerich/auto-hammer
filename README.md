@@ -30,6 +30,9 @@ assets/js/nav.js        Kopfhöhe, Karte, mobile Navigation
 assets/fonts/           Barlow und Inter als WOFF2, dazu die Lizenzen
 assets/img/             Bilder, siehe assets/img/README.md
 .claude/launch.json     lokaler Vorschauserver
+
+robots.txt              erlaubt alles, verweist auf die Sitemap
+sitemap.xml             alle 32 Adressen mit Änderungsdatum
 ```
 
 ## Meldungen
@@ -100,9 +103,6 @@ Dann http://localhost:4321 öffnen.
 
 Alles davon ist im Quelltext mit einem Kommentar markiert.
 
-- **Favicon und Teilerbild.** Zwei auskommentierte Zeilen im `<head>`.
-- **Bilder verkleinern.** Die Dateien in `assets/img/` sind unbearbeitet und
-  schwerer als nötig. Siehe `assets/img/README.md`.
 - **Pflichtangaben in Impressum und Datenschutz.** Beide Seiten stehen, die
   noch fehlenden Angaben sind gelb markiert (`<span class="fill">`). Nach dem
   Ausfüllen die Regel `.fill` und die beiden `.notice`-Kästen aus dem
@@ -111,6 +111,60 @@ Alles davon ist im Quelltext mit einem Kommentar markiert.
   Livegang anwaltlich prüfen lassen.
 - **Kontaktformular.** Bewusst nicht gebaut: ein Formular braucht einen
   Empfänger auf dem Server. Aktuell führen alle Wege auf Telefon und Mail.
+
+## Sichtbarkeit in Suchmaschinen
+
+Die Angaben gehen von `https://auto-hammer-ufr.de/` als endgültiger Adresse
+aus, die neue Seite ersetzt dort also die alte. Wird es eine andere Domain,
+müssen alle `canonical`- und `og:`-Adressen sowie `robots.txt` und
+`sitemap.xml` darauf umgestellt werden.
+
+### Im Kopf jeder Seite
+
+Zwischen `<!-- seo:anfang -->` und `<!-- seo:ende -->` stehen auf jeder
+Seite dieselben Angaben:
+
+- `canonical` mit der vollständigen Adresse. Wichtig, weil manche Server
+  dieselbe Seite auch ohne `.html` ausliefern. Ohne diese Zeile wären das
+  für Suchmaschinen zwei Seiten mit gleichem Inhalt.
+- Open Graph und Twitter-Card für die Vorschau beim Teilen. `og:image` zeigt
+  auf das Leitbild der jeweiligen Seite, bei Seiten ohne eigenes Foto auf
+  `assets/img/og.jpg`.
+- Favicon und Apple-Touch-Symbol.
+
+Bei einer neuen Seite diesen Block aus einer bestehenden kopieren und
+Adresse, Titel, Beschreibung und Bild anpassen.
+
+### Am Fuß jeder Seite
+
+Zwischen `<!-- daten:anfang -->` und `<!-- daten:ende -->` stehen
+strukturierte Daten als JSON-LD: der Brotkrumenpfad auf allen Unterseiten,
+dazu `BlogPosting` auf den Meldungen. Die `AutoRepair`-Angaben der
+Startseite mit Adresse, Telefon und Öffnungszeiten stehen separat und
+müssen mit dem Impressum übereinstimmen.
+
+### Sitemap
+
+`sitemap.xml` führt alle Seiten mit ihrem Änderungsdatum auf, `robots.txt`
+verweist darauf. Eine neue Seite muss dort von Hand eingetragen werden.
+Nach dem Livegang lohnt es sich, die Sitemap einmal in der Google Search
+Console anzumelden.
+
+## Bilder im Netz
+
+Die Dateien sind auf die Breite verkleinert, in der sie tatsächlich
+angezeigt werden, und neu komprimiert. Fotos liegen zusätzlich in einer
+schmalen Fassung mit dem Zusatz `-720` beziehungsweise `-320` bei den
+Porträts. Welche davon geladen wird, entscheidet der Browser anhand von
+`srcset` und `sizes` am Bild.
+
+Die `sizes`-Angabe beschreibt, wie breit das Bild an dieser Stelle steht,
+nicht wie groß die Datei ist. Wer das Layout ändert, muss sie mit ändern,
+sonst lädt der Browser die falsche Fassung. Die Werte je Einbauort stehen
+in `assets/img/README.md`.
+
+Die Originale in voller Auflösung liegen nicht mehr im Verzeichnis. Sie
+stecken in der Versionsgeschichte und auf der alten Seite.
 
 ## Schriften
 

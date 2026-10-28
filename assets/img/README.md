@@ -63,7 +63,7 @@ auf jedem Bildschirm lesbar und lässt sich einzeln ändern.
 Hintergrund. Es steht auf `ueber-uns.html` über die volle Breite und darf
 weder beschnitten noch auf eine Fläche gesetzt werden.
 
-Die sieben Porträts im Studioformat 650 × 650 stehen dort als
+Die acht Porträts aus dem Studio stehen auf `ueber-uns.html` als
 Ansprechpartner, mit Namen und Funktion von der alten Seite:
 
 | Datei | Person |
@@ -72,9 +72,21 @@ Ansprechpartner, mit Namen und Funktion von der alten Seite:
 | `team-kathleen-hammer.jpg` | Kathleen Hammer, Geschäftsführung und Buchhaltung |
 | `team-daniel-stark.jpg` | Daniel Stark, Teamleiter Karosserie |
 | `team-dieter-eichelbroenner.jpg` | Dieter Eichelbrönner, Teamleiter Lack |
+| `team-michael-volkmann.jpg` | Michael Volkmann, Kundendienst und Mechanik |
 | `team-karin-proeschel.jpg` | Karin Pröschel, Serviceannahme |
 | `team-alexandra-haase.jpg` | Alexandra Haase, Serviceannahme |
 | `team-carolin-faulhaber.jpg` | Caroline Faulhaber-Dorsch, Kaufmännische Assistentin |
+
+Die alte Seite „Wir über uns" zeigt nur sieben davon. Michael Volkmann
+fehlt dort, steht aber als Ansprechpartner im Text der Seiten Kundendienst
+und Mechanik; daher sein Porträt und seine Funktion.
+
+Im Mediarchiv der alten Seite liegt ein neuntes Porträt aus demselben
+Shooting vom 21.01.2022, `0003_MarcelSchlaer.jpg`. Es ist auf keiner Seite
+eingebunden, und der Name kommt in keinem Seitentext vor. Weil der Beleg
+damit nur aus dem Dateinamen bestand, steht die Person nicht auf der neuen
+Seite. Dasselbe gilt für die Werkstattaufnahme `volkmann_schlaer.jpg` aus
+demselben Upload.
 
 Die Schreibweise der Namen stammt aus den Bildunterschriften der alten
 Seite, nicht aus den Dateinamen. Einmal weichen beide voneinander ab: Die
@@ -85,8 +97,8 @@ am Zusatz `-werkstatt`. Davon ist `team-daniel-stark-werkstatt.jpg` im
 unteren Abschnitt von `ueber-uns.html` im Einsatz; die beiden anderen von
 Dieter Eichelbrönner und Karin Pröschel liegen frei.
 
-`team-volkmann.jpg` steht nirgends: Die alte Seite nennt dazu weder Namen
-noch Funktion.
+`team-volkmann.jpg` ist eine Werkstattaufnahme von Michael Volkmann und
+wird nicht mehr gebraucht, seit das Studioporträt da ist.
 
 Ob alle abgebildeten Personen noch im Betrieb sind, weiß ich nicht. Das
 gehört vor der Veröffentlichung geprüft.
@@ -160,7 +172,7 @@ verkleinert:
 | Art | Obergrenze | schmale Fassung |
 |---|---|---|
 | Fotos in Artikeln, Karten und Aufmachern | 1400 px | `-720` |
-| Porträts im Teamraster | 520 px | `-320` |
+| Porträts im Teamraster | 650 px | `-400` |
 | ZEEKR-Banner | 840 px | – |
 | Siegel | 480 px | – |
 | Gruppenbild `team-gesamt.png` | 1250 px | – |

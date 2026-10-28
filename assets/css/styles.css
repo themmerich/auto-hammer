@@ -182,6 +182,13 @@ a:hover { color: var(--brand-dark); }
 }
 
 .section { padding-block: var(--space-18); }
+.section--tinted {
+  background: var(--surface-2);
+  border-block: 1px solid var(--line);
+}
+/* Jahresgruppen auf der Meldungsübersicht stehen enger beieinander als
+   eigenständige Abschnitte, sonst reißt die Liste auseinander. */
+.section--jahr { padding-block: var(--space-10); }
 
 /* Beim Sprung auf einen Anker schiebt sich sonst der mitlaufende Kopf über
    die Überschrift, zu der gesprungen wurde. Der Abstand hält sie frei. */
@@ -268,6 +275,15 @@ img.photo {
   height: auto;
   padding: 0;
   object-fit: cover;
+}
+
+/* Siegel und Herstellerbanner tragen Schrift im Bild. Sie dürfen nicht
+   auf ein Seitenverhältnis beschnitten werden, sonst fehlt die Hälfte. */
+img.photo--grafik {
+  object-fit: contain;
+  background: var(--surface);
+  padding: var(--space-5);
+  border-bottom: 1px solid var(--line);
 }
 
 /* --- Kopfzeile ------------------------------------------------------------ */
@@ -741,6 +757,25 @@ img.photo {
   color: var(--muted);
   max-width: 60ch;
 }
+.pagehead__meta {
+  margin-top: var(--space-3);
+  font-size: 15px;
+  color: var(--muted);
+}
+
+/* Meldungen: schmalere Spalte als der Rest der Seite, damit die Zeilen
+   lesbar lang bleiben und das Bild nicht die ganze Breite einnimmt. */
+.article { max-width: 760px; }
+.article > .photo { margin-bottom: var(--space-10); }
+.grafik { max-width: 420px; margin-bottom: var(--space-10); }
+.grafik img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+.article .prose { max-width: none; }
 
 .prose { max-width: 70ch; }
 .prose h2 {
@@ -763,6 +798,8 @@ img.photo {
 .prose li { margin-bottom: var(--space-2); }
 .prose address { font-style: normal; margin-bottom: var(--space-4); }
 .prose > *:last-child { margin-bottom: 0; }
+/* Bildnachweis oder Textquelle am Fuß einer Meldung */
+.prose .quelle { font-size: 15px; color: var(--muted); }
 
 /* Noch einzutragende Pflichtangabe. Vor dem Livegang müssen alle
    Vorkommen von .fill ersetzt und diese Regel entfernt werden. */

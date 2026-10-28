@@ -58,17 +58,37 @@ auf jedem Bildschirm lesbar und lässt sich einzeln ändern.
 
 ## Team
 
-`team-gesamt.png` ist das Gruppenbild. Die Porträts im Studioformat
-650 × 650 sind nach Person benannt: `team-uwe-hammer.jpg`,
-`team-kathleen-hammer.jpg`, `team-daniel-stark.jpg`,
-`team-dieter-eichelbroenner.jpg`, `team-alexandra-haase.jpg`,
-`team-carolin-faulhaber.jpg`, `team-karin-proeschel.jpg`,
-`team-volkmann.jpg`. Von drei Personen gibt es zusätzlich eine Aufnahme
-im Betrieb, erkennbar am Zusatz `-werkstatt`.
+`team-gesamt.png` ist das Gruppenbild, freigestellt mit durchsichtigem
+Hintergrund. Es steht auf `ueber-uns.html` über die volle Breite und darf
+weder beschnitten noch auf eine Fläche gesetzt werden.
 
-Die Zuordnung der Namen stammt aus den Dateinamen der alten Seite und
-sollte vor der Veröffentlichung geprüft werden. Ob alle abgebildeten
-Personen noch im Betrieb sind, weiß ich nicht.
+Die sieben Porträts im Studioformat 650 × 650 stehen dort als
+Ansprechpartner, mit Namen und Funktion von der alten Seite:
+
+| Datei | Person |
+|---|---|
+| `team-uwe-hammer.jpg` | Uwe Hammer, Geschäftsführung |
+| `team-kathleen-hammer.jpg` | Kathleen Hammer, Geschäftsführung und Buchhaltung |
+| `team-daniel-stark.jpg` | Daniel Stark, Teamleiter Karosserie |
+| `team-dieter-eichelbroenner.jpg` | Dieter Eichelbrönner, Teamleiter Lack |
+| `team-karin-proeschel.jpg` | Karin Pröschel, Serviceannahme |
+| `team-alexandra-haase.jpg` | Alexandra Haase, Serviceannahme |
+| `team-carolin-faulhaber.jpg` | Caroline Faulhaber-Dorsch, Kaufmännische Assistentin |
+
+Die Schreibweise der Namen stammt aus den Bildunterschriften der alten
+Seite, nicht aus den Dateinamen. Einmal weichen beide voneinander ab: Die
+Datei heißt `carolin`, die Person Caroline Faulhaber-Dorsch.
+
+Von drei Personen gibt es zusätzlich eine Aufnahme im Betrieb, erkennbar
+am Zusatz `-werkstatt`. Davon ist `team-daniel-stark-werkstatt.jpg` im
+unteren Abschnitt von `ueber-uns.html` im Einsatz; die beiden anderen von
+Dieter Eichelbrönner und Karin Pröschel liegen frei.
+
+`team-volkmann.jpg` steht nirgends: Die alte Seite nennt dazu weder Namen
+noch Funktion.
+
+Ob alle abgebildeten Personen noch im Betrieb sind, weiß ich nicht. Das
+gehört vor der Veröffentlichung geprüft.
 
 ## Siegel
 

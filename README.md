@@ -14,6 +14,8 @@ lackierung.html
 mechanik.html
 kundendienst.html
 
+ueber-uns.html          Geschichte, Ansprechpartner, Team
+
 aktuelles.html          Übersicht aller Meldungen, nach Jahr gruppiert
 reifenwechseltage.html  22 Meldungen, je eine Seite.
 wintercheck.html        Die Dateinamen folgen dem Thema,
@@ -69,6 +71,22 @@ Fassungen sich in der Suche nicht gegenseitig verdrängen.
 Drei Meldungen betreffen die Auszeichnung „Werkstatt des Vertrauens" in den
 Jahrgängen 2022, 2025 und 2026. Der Text ist auf der alten Seite jedes Mal
 derselbe; hier ist er jeweils anders formuliert.
+
+## Wir über uns
+
+`ueber-uns.html` bündelt, was auf der alten Seite unter „Wir über uns"
+stand: Firmengeschichte, Ansprechpartner mit Foto, Angaben zum Team und
+zum Einzugsgebiet.
+
+Drei eigene Bausteine stehen dafür im Stylesheet. `.teamfoto` zeigt das
+freigestellte Gruppenbild über die volle Breite, ohne Beschnitt und ohne
+Hintergrundfläche. `.jahre` ist die Liste der Firmendaten, Jahreszahl
+links, Text rechts, auf schmalen Schirmen untereinander. `.team` ist das
+Raster der Porträts, vier Spalten, ab 900 Pixel drei und ab 760 zwei.
+
+Namen und Funktionen der sieben Ansprechpartner stammen aus den
+Bildunterschriften der alten Seite. Wer dazukommt oder geht, wird in
+`ueber-uns.html` von Hand nachgezogen.
 
 ## Lokal ansehen
 

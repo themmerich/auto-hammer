@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auto-hammer-ufr.de/sitemap.xml

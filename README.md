@@ -215,6 +215,28 @@ richtigen Gebäude, unabhängig davon, welche Hausnummer dort als Merkmal
 hinterlegt ist. Wer mag, kann die Nummer bei OpenStreetMap berichtigen; der
 Eintrag heißt dort „Auto Hammer" an der Zeppelinstraße.
 
+## Bewertungen
+
+Die alte Seite hat eine eigene Rezensionsseite mit rund 56 Kundenstimmen.
+Die neue hat keine. Auf der Startseite stehen drei Zitate als Kostprobe,
+daneben ein Link auf das Google-Unternehmensprofil.
+
+Der Grund: Die Stimmen auf der alten Seite sind von Hand abgetippte Kopien,
+erkennbar an Anzeigenamen wie „Mr. KiRaTeCa" oder „Nico the 1000". Eine
+solche Liste ist immer veraltet, macht Arbeit und wirkt schwächer als die
+Bewertungen an der Quelle, die der Betrieb nicht bearbeiten kann. Nebenbei
+entfällt die Frage, ob fremde Bewertungstexte samt Namen auf der eigenen
+Seite gespiegelt werden dürfen.
+
+Der Link ist vorläufig eine Google-Maps-Suche nach Name und Anschrift. Er
+führt zum richtigen Eintrag, sollte aber durch die genaue Adresse aus dem
+Google-Unternehmensprofil ersetzt werden, zu finden dort unter „Rezensionen
+teilen". Die Stelle ist in `index.html` mit einem Kommentar markiert.
+
+Der Menüpunkt „Rezensionen" ist entfallen. Für drei Zitate auf der
+Startseite war ein eigener Punkt zu viel Gewicht, und die Kopfleiste hat
+dadurch wieder Luft.
+
 ## Inhaltliche Quellen
 
 Texte, Öffnungszeiten, Auszeichnungen und Kundenzitate stammen von

@@ -87,9 +87,14 @@ Hintergrundfläche. `.jahre` ist die Liste der Firmendaten, Jahreszahl
 links, Text rechts, auf schmalen Schirmen untereinander. `.team` ist das
 Raster der Porträts, vier Spalten, ab 900 Pixel drei und ab 760 zwei.
 
-Namen und Funktionen der sieben Ansprechpartner stammen aus den
-Bildunterschriften der alten Seite. Wer dazukommt oder geht, wird in
-`ueber-uns.html` von Hand nachgezogen.
+Namen und Funktionen der acht Ansprechpartner stammen aus den
+Bildunterschriften der alten Seite und von den Leistungsseiten dort. Wer
+dazukommt oder geht, wird in `ueber-uns.html` von Hand nachgezogen; das
+Raster steht auf vier Spalten, acht Personen füllen zwei volle Reihen.
+
+Im Mediarchiv der alten Seite liegt ein neuntes Porträt, das dort auf
+keiner Seite eingebunden ist und dessen Name nur im Dateinamen steht.
+Siehe `assets/img/README.md`.
 
 ## Lokal ansehen
 

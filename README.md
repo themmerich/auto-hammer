@@ -8,6 +8,7 @@ mobile Navigation. Lässt sich auf jedem Webspace ablegen.
 ```
 index.html              Startseite
 
+leistungen.html         Übersicht der Leistungen
 unfall.html             Leistungen, je eine Seite
 karosserie.html
 lackierung.html
@@ -219,6 +220,28 @@ richtigen Gebäude, unabhängig davon, welche Hausnummer dort als Merkmal
 hinterlegt ist. Wer mag, kann die Nummer bei OpenStreetMap berichtigen; der
 Eintrag heißt dort „Auto Hammer" an der Zeppelinstraße.
 
+## Navigation
+
+Vier Punkte, alle auf einer Ebene und alle auf echte Seiten:
+**Leistungen · Über uns · Aktuelles · Kontakt**, rechts die Telefonnummer.
+Das ist die Reihenfolge, in der ein Besucher denkt: Was macht ihr, wer seid
+ihr, was gibt es Neues, wie erreiche ich euch.
+
+Vorher standen „Leistungen" und „Unfall" nebeneinander, obwohl Unfall eine
+der fünf Leistungen ist. Beide zeigten außerdem auf Anker der Startseite,
+und „Unfall" führte je nach Seite woanders hin: auf der Startseite zum
+blauen Abschnitt, sonst auf `unfall.html`.
+
+Unfallinstandsetzung ist weiterhin gut erreichbar: als erste Karte in
+`leistungen.html`, auf der Startseite als Leitkarte und im eigenen blauen
+Abschnitt mit dem Knopf „Unfallschaden melden", dazu am Fuß jeder
+Leistungsseite unter „Weitere Leistungen".
+
+Ein Menüpunkt soll auf eine Seite zeigen, nicht auf einen Anker. Sonst lädt
+jeder Klick von einer Unterseite aus die ganze Startseite nach. Wer die
+Navigation erweitert, sollte das beibehalten; ab sieben Punkten wird die
+Kopfleiste außerdem eng.
+
 ## Kontakt
 
 `kontakt.html` ist die Anlaufstelle hinter dem Menüpunkt. Vorher sprang er
@@ -235,7 +258,18 @@ dazu in der Kopfleiste jeder Seite und in den strukturierten Daten der
 Startseite. Wenn sich etwas davon ändert, muss es überall nachgezogen
 werden.
 
-Ein Kontaktformular wie auf der alten Seite gibt es nicht. Ein Formular
+In der Fußzeile jeder Seite steht ein Link auf die Facebook-Seite des
+Betriebs, wie auf der alten Website. Es ist ein gewöhnlicher Link, keine
+eingebettete Schaltfläche: Solange niemand darauf klickt, geht keine
+Anfrage an Facebook. In der Datenschutzerklärung steht dazu der Abschnitt
+„Soziale Netzwerke" mit der gemeinsamen Verantwortlichkeit nach Artikel 26
+DSGVO, die für Facebook-Seiten gilt.
+
+Einen Newsletter gibt es nicht. Die alte Seite hat eine Anmeldeseite und
+zwei Bestätigungsseiten; ein Newsletter braucht einen Dienst mit
+Double-Opt-in, das ist keine Frage des HTML.
+
+Ein Kontaktformular wie auf der alten Seite gibt es ebenfalls nicht. Ein Formular
 braucht einen Empfänger auf dem Server; die `mailto:`-Krücke öffnet das
 Mailprogramm des Besuchers und geht auf dem Telefon oft schief. Kann der
 Webspace PHP, lässt sich ein Formular nachrüsten.

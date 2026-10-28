@@ -76,11 +76,43 @@ Personen noch im Betrieb sind, weiß ich nicht.
 2024, `siegel-dekra-2024.png`, `siegel-meisterhaft.png`,
 `siegel-zeekr.jpg`.
 
-## Aktuelles
+## Meldungen
 
-`news-reifenwechsel.jpg`, `news-wintercheck.jpg`,
-`news-fruehjahrscheck.jpg`, `news-adrian-thiele.png`,
-`news-scheibenreparatur.jpg`, `news-smart-repair.jpg`, `news-zeekr.jpg`.
+Jedes dieser Bilder steht auf einer Meldungsseite. Die mit *Grafik*
+markierten tragen Schrift im Bild und werden nicht beschnitten.
+
+| Datei | Meldung |
+|---|---|
+| `news-reifenwechsel.jpg` | Reifenwechseltage |
+| `news-wintercheck.jpg` | Wintercheck |
+| `news-adrian-thiele.png` | Willkommen im Team, Adrian |
+| `karosserie-2.jpg` | Unfallservice für alle Marken |
+| `news-zeekr.jpg` | ZEEKR Servicepartner — *Grafik* |
+| `news-scheibenreparatur.jpg` | Steinschlag reparieren |
+| `werkstatt-hebebuehne.jpg` | Kundendienst nach Herstellervorgaben |
+| `siegel-werkstatt-des-vertrauens-2026.jpg` | Werkstatt des Vertrauens 2026 — *Grafik* |
+| `news-fruehjahrscheck.jpg` | Urlaubs-Check |
+| `news-kletterwald.jpg` | Teamevent im Kletterwald |
+| `news-azubi-austausch.jpg` | Azubi-Austausch mit Spanien |
+| `siegel-werkstatt-des-vertrauens-2025.jpg` | Werkstatt des Vertrauens 2025 — *Grafik* |
+| `news-kart-arena.jpg` | Teamevent in der Kart Arena |
+| `news-tuev-rheinland.jpg` | TÜV Rheinland, Servicequalität |
+| `news-kindergarten.jpg` | Rottendorfer Kindergarten zu Besuch |
+| `news-jubilaeum-daniel-stark.jpg` | 30 Jahre Daniel Stark |
+| `news-gewerbeschau.jpg` | Gewerbeschau in Kitzingen |
+| `news-smart-repair.jpg` | Smart Repair |
+| `news-azubis-2022.jpg` | Ausbildungsstart 2022 |
+| `news-brk-kinderhaus.jpg` | BRK-Kinderhaus zu Besuch |
+| `team-uwe-kathleen-hammer.jpg` | Werkstatt des Vertrauens 2022 |
+| `news-tuev-sued.jpg` | Werkstatt-Test des TÜV Süd |
+
+Die Auszeichnungen zeigen auf der alten Seite teils dasselbe Foto von Uwe
+und Kathleen Hammer. Hier steht stattdessen das Siegel des jeweiligen
+Jahrgangs, soweit vorhanden; nur 2022 behält das Foto.
+
+Für den Beitrag `news-brk-kinderhaus.jpg` gilt der Nachweis aus dem
+Originalbeitrag: Bild und Textauszug von Stefan Krüger, BRK Würzburg. Das
+steht auch auf der Seite selbst.
 
 ## Nicht übernommen
 
@@ -89,8 +121,10 @@ Personen noch im Betrieb sind, weiß ich nicht.
   LACKIERUNGEN" und so weiter).
 - Die Navigationskacheln `button-*`, 290 × 350, zu klein.
 - Ältere Fassungen der Siegel von Innung und Meisterhaft.
-- Schnappschüsse aus älteren Meldungen, etwa vom Werkstattbesuch des
-  BRK-Kinderhauses.
+- Die weiteren Aufnahmen innerhalb der Meldungen. Mehrere Beiträge haben
+  im Text noch eine Bildergalerie, etwa das Teamevent im Kletterwald mit
+  32 Aufnahmen oder die Gewerbeschau mit 14. Übernommen ist jeweils nur
+  das Titelbild.
 
 Diese Dateien liegen noch im Zwischenordner der Sitzung und lassen sich
 nachholen, solange die Sitzung besteht. Danach wieder von der alten Seite.

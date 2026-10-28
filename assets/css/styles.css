@@ -646,6 +646,7 @@ img.photo--grafik {
 }
 .contact__row { display: flex; align-items: center; gap: var(--space-3); }
 .contact__row svg { flex: 0 0 auto; color: var(--brand); }
+.contact__mehr { margin-top: var(--space-6); font-weight: 600; }
 .contact__tel { font-weight: 600; text-decoration: none; }
 
 /* Karte. Bis zum Klick steht hier nur Text, danach füllt das iframe den

@@ -15,6 +15,7 @@ mechanik.html
 kundendienst.html
 
 ueber-uns.html          Geschichte, Ansprechpartner, Team
+kontakt.html            Erreichbarkeit, Anfahrt, Karte
 
 aktuelles.html          Übersicht aller Meldungen, nach Jahr gruppiert
 reifenwechseltage.html  22 Meldungen, je eine Seite.
@@ -108,6 +109,9 @@ Dann http://localhost:4321 öffnen.
 
 Alles davon ist im Quelltext mit einem Kommentar markiert.
 
+- **Angaben auf der Kontaktseite.** Weg ins Industriegebiet, Parkplätze,
+  Schlüsselrückgabe und die Nummer des Abschleppservice sind gelb markiert.
+  Die bisherige Seite nennt davon nichts.
 - **Pflichtangaben in Impressum und Datenschutz.** Beide Seiten stehen, die
   noch fehlenden Angaben sind gelb markiert (`<span class="fill">`). Nach dem
   Ausfüllen die Regel `.fill` und die beiden `.notice`-Kästen aus dem
@@ -214,6 +218,27 @@ Karte nicht — der Marker sitzt auf dem Eintrag des Betriebs, also auf dem
 richtigen Gebäude, unabhängig davon, welche Hausnummer dort als Merkmal
 hinterlegt ist. Wer mag, kann die Nummer bei OpenStreetMap berichtigen; der
 Eintrag heißt dort „Auto Hammer" an der Zeppelinstraße.
+
+## Kontakt
+
+`kontakt.html` ist die Anlaufstelle hinter dem Menüpunkt. Vorher sprang er
+auf den Abschnitt der Startseite, was von jeder Unterseite aus bedeutete,
+die ganze Startseite nachzuladen, nur um eine Telefonnummer zu sehen.
+
+Die Seite führt Telefon, Mail, Anschrift, Öffnungszeiten und die Karte, dazu
+Anfahrt, Parken, die Schlüsselrückgabe außerhalb der Zeiten und den Verweis
+auf die Ansprechpartner. Der Abschnitt auf der Startseite bleibt bestehen
+und verlinkt dorthin; wer dort landet, soll nicht erst klicken müssen.
+
+Telefonnummer und Öffnungszeiten stehen damit an zwei Stellen im Quelltext,
+dazu in der Kopfleiste jeder Seite und in den strukturierten Daten der
+Startseite. Wenn sich etwas davon ändert, muss es überall nachgezogen
+werden.
+
+Ein Kontaktformular wie auf der alten Seite gibt es nicht. Ein Formular
+braucht einen Empfänger auf dem Server; die `mailto:`-Krücke öffnet das
+Mailprogramm des Besuchers und geht auf dem Telefon oft schief. Kann der
+Webspace PHP, lässt sich ein Formular nachrüsten.
 
 ## Bewertungen
 

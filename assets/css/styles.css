@@ -323,6 +323,9 @@ img.photo--grafik {
   gap: 3px;
   text-decoration: none;
   color: inherit;
+  /* Nicht schrumpfen lassen: Sonst quetscht die Navigation das Logo und
+     der Claim darunter bricht um, was die Kopfzeile höher macht. */
+  flex: 0 0 auto;
 }
 /* Querfassung des Logos: Hammer rechts neben dem Schriftzug, Claim nicht
    im Bild. Der steht als Text darunter und bleibt dadurch lesbar. */
@@ -332,6 +335,7 @@ img.photo--grafik {
 }
 .logo__claim {
   display: block;
+  white-space: nowrap;
   font-size: 11px;
   letter-spacing: 0.01em;
   color: var(--muted);
@@ -351,6 +355,10 @@ img.photo--grafik {
   padding-block: var(--space-2);
 }
 .nav__link:hover { color: var(--brand); }
+/* Ohne nowrap schrumpfen die Flex-Posten und brechen mitten im Wort um,
+   sobald die Leiste eng wird: "Über" über "uns". */
+.nav__link,
+.nav__list .btn { white-space: nowrap; }
 
 .nav__toggle {
   display: none;
@@ -822,6 +830,58 @@ img.photo--grafik {
 .notice > *:last-child { margin-bottom: 0; }
 .notice strong { font-weight: 600; }
 
+/* --- Wir über uns --------------------------------------------------------- */
+
+/* Das Gruppenfoto ist freigestellt und hat einen durchsichtigen Hintergrund.
+   Es darf deshalb weder beschnitten noch auf eine Fläche gesetzt werden. */
+.teamfoto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Firmengeschichte: Jahreszahl links, Text rechts. */
+.jahre { border-top: 1px solid var(--line); }
+.jahre__item {
+  display: flex;
+  gap: var(--space-8);
+  align-items: baseline;
+  padding-block: var(--space-5);
+  border-bottom: 1px solid var(--line);
+}
+.jahre__jahr {
+  flex: 0 0 76px;
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--brand);
+}
+.jahre__text { color: var(--ink-2); max-width: 62ch; }
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-8) var(--space-6);
+}
+.team__item { display: flex; flex-direction: column; }
+.team__foto {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: var(--space-4);
+}
+.team__name {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.team__rolle { font-size: 15px; color: var(--muted); margin-top: 2px; }
+
 .footer {
   background: var(--ink);
   color: #A8B0C0;
@@ -844,7 +904,17 @@ img.photo--grafik {
 
 /* --- Responsive ----------------------------------------------------------- */
 
+/* Knapp oberhalb der Burger-Grenze wird es eng. Lieber enger setzen als
+   die Leiste zweizeilig werden lassen. */
+@media (max-width: 1100px) {
+  .nav,
+  .nav__list { gap: 14px; }
+  .btn--compact { padding: 11px 14px; }
+}
+
 @media (max-width: 900px) {
+  .team { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
   /* Hier läuft der Kopf nicht mit, er scrollt weg. Ein Sprungabstand in
      Kopfhöhe würde nur eine Lücke über der Überschrift erzeugen. */
   :root { --gutter: 24px; --space-18: 56px; --header-h: 0px; }
@@ -884,6 +954,10 @@ img.photo--grafik {
 @media (max-width: 760px) {
   .quotes,
   .news { grid-template-columns: 1fr; }
+
+  .team { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+  .jahre__item { flex-direction: column; gap: var(--space-2); }
 
   .topbar__inner { flex-direction: column; gap: var(--space-1); }
 

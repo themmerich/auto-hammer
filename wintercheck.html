@@ -240,54 +240,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aktuelles",
-      "item": "https://auto-hammer-ufr.de/aktuelles.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/wintercheck.html#seite",
+      "url": "https://auto-hammer-ufr.de/wintercheck.html",
       "name": "Wintercheck für alle Marken und Modelle",
-      "item": "https://auto-hammer-ufr.de/wintercheck.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Wintercheck in Rottendorf bei Würzburg: Batterie, Bremsen, Licht, Reifen und Flüssigkeiten. Für alle Marken und Modelle.",
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/wintercheck.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/wintercheck.html#meldung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/wintercheck.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aktuelles",
+          "item": "https://auto-hammer-ufr.de/aktuelles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Wintercheck für alle Marken und Modelle",
+          "item": "https://auto-hammer-ufr.de/wintercheck.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://auto-hammer-ufr.de/wintercheck.html#meldung",
+      "mainEntityOfPage": {
+        "@id": "https://auto-hammer-ufr.de/wintercheck.html#seite"
+      },
+      "headline": "Wintercheck für alle Marken und Modelle",
+      "description": "Vor dem ersten Frost prüfen wir die Teile, die im Winter zuerst Ärger machen: Batterie, Licht, Bremsen und Reifen.",
+      "datePublished": "2026-10-01",
+      "inLanguage": "de-DE",
+      "author": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "publisher": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "image": "https://auto-hammer-ufr.de/assets/img/news-wintercheck.jpg"
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://auto-hammer-ufr.de/wintercheck.html"
-  },
-  "headline": "Wintercheck für alle Marken und Modelle",
-  "description": "Vor dem ersten Frost prüfen wir die Teile, die im Winter zuerst Ärger machen: Batterie, Licht, Bremsen und Reifen.",
-  "datePublished": "2026-10-01",
-  "inLanguage": "de-DE",
-  "author": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png"
-    }
-  },
-  "image": "https://auto-hammer-ufr.de/assets/img/news-wintercheck.jpg"
 }
 </script>
 <!-- daten:ende -->

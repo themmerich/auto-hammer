@@ -236,19 +236,97 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
+      "@type": "CollectionPage",
+      "@id": "https://auto-hammer-ufr.de/leistungen.html#seite",
+      "url": "https://auto-hammer-ufr.de/leistungen.html",
+      "name": "Unsere Leistungen",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Unfallinstandsetzung, Karosserie, Lackierung, Mechanik und Kundendienst für alle Marken. Karosserie- und Lackierfachbetrieb in Rottendorf bei Würzburg.",
+      "about": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/leistungen.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/leistungen.html#liste"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/leistungen.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Leistungen",
+          "item": "https://auto-hammer-ufr.de/leistungen.html"
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://auto-hammer-ufr.de/leistungen.html#liste",
       "name": "Leistungen",
-      "item": "https://auto-hammer-ufr.de/leistungen.html"
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Unfallinstandsetzung",
+          "url": "https://auto-hammer-ufr.de/unfall.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Karosseriearbeiten und Autoglas",
+          "url": "https://auto-hammer-ufr.de/karosserie.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Fahrzeuglackierung",
+          "url": "https://auto-hammer-ufr.de/lackierung.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Mechanik und Reparatur",
+          "url": "https://auto-hammer-ufr.de/mechanik.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Kundendienst, Hauptuntersuchung und Abgasuntersuchung",
+          "url": "https://auto-hammer-ufr.de/kundendienst.html"
+        }
+      ]
     }
   ]
 }

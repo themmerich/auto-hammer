@@ -221,19 +221,86 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/kundendienst.html#seite",
+      "url": "https://auto-hammer-ufr.de/kundendienst.html",
       "name": "Kundendienst, HU und AU",
-      "item": "https://auto-hammer-ufr.de/kundendienst.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Inspektion nach Herstellervorgaben für alle Marken, HU und AU im Haus. Die Herstellergarantie bleibt erhalten. Rottendorf bei Würzburg.",
+      "about": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/kundendienst.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/kundendienst.html#leistung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/kundendienst.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kundendienst, HU und AU",
+          "item": "https://auto-hammer-ufr.de/kundendienst.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://auto-hammer-ufr.de/kundendienst.html#leistung",
+      "name": "Kundendienst, Hauptuntersuchung und Abgasuntersuchung",
+      "serviceType": "Kundendienst, Hauptuntersuchung und Abgasuntersuchung",
+      "description": "Inspektion nach Herstellervorgaben für alle Marken, HU und AU im Haus. Die Herstellergarantie bleibt erhalten. Rottendorf bei Würzburg.",
+      "url": "https://auto-hammer-ufr.de/kundendienst.html",
+      "provider": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rottendorf"
+        },
+        {
+          "@type": "City",
+          "name": "Würzburg"
+        },
+        {
+          "@type": "City",
+          "name": "Kitzingen"
+        }
+      ],
+      "image": "https://auto-hammer-ufr.de/assets/img/kundendienst-2.jpg"
     }
   ]
 }

@@ -168,54 +168,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aktuelles",
-      "item": "https://auto-hammer-ufr.de/aktuelles.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#seite",
+      "url": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html",
       "name": "Der Rottendorfer Kindergarten in der Werkstatt",
-      "item": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Die Vorschulkinder des Rottendorfer Kindergartens haben die Werkstatt besichtigt, vom Abschleppwagen bis zur Lackieranlage.",
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#meldung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aktuelles",
+          "item": "https://auto-hammer-ufr.de/aktuelles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Der Rottendorfer Kindergarten in der Werkstatt",
+          "item": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#meldung",
+      "mainEntityOfPage": {
+        "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html#seite"
+      },
+      "headline": "Der Rottendorfer Kindergarten in der Werkstatt",
+      "description": "Die Vorschulkinder des Rottendorfer Kindergartens haben sich die Werkstatt angesehen.",
+      "datePublished": "2024-05-23",
+      "inLanguage": "de-DE",
+      "author": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "publisher": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "image": "https://auto-hammer-ufr.de/assets/img/news-kindergarten.jpg"
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://auto-hammer-ufr.de/kindergarten-zu-besuch.html"
-  },
-  "headline": "Der Rottendorfer Kindergarten in der Werkstatt",
-  "description": "Die Vorschulkinder des Rottendorfer Kindergartens haben sich die Werkstatt angesehen.",
-  "datePublished": "2024-05-23",
-  "inLanguage": "de-DE",
-  "author": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png"
-    }
-  },
-  "image": "https://auto-hammer-ufr.de/assets/img/news-kindergarten.jpg"
 }
 </script>
 <!-- daten:ende -->

@@ -168,54 +168,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aktuelles",
-      "item": "https://auto-hammer-ufr.de/aktuelles.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#seite",
+      "url": "https://auto-hammer-ufr.de/tuev-rheinland.html",
       "name": "Vom TÜV Rheinland für Servicequalität ausgezeichnet",
-      "item": "https://auto-hammer-ufr.de/tuev-rheinland.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Der TÜV Rheinland hat die Servicequalität des Betriebs auditiert und ein Zertifikat ausgestellt.",
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#meldung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aktuelles",
+          "item": "https://auto-hammer-ufr.de/aktuelles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Vom TÜV Rheinland für Servicequalität ausgezeichnet",
+          "item": "https://auto-hammer-ufr.de/tuev-rheinland.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#meldung",
+      "mainEntityOfPage": {
+        "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html#seite"
+      },
+      "headline": "Vom TÜV Rheinland für Servicequalität ausgezeichnet",
+      "description": "Der TÜV Rheinland hat unsere Servicequalität auditiert und uns ein Zertifikat ausgestellt.",
+      "datePublished": "2024-09-09",
+      "inLanguage": "de-DE",
+      "author": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "publisher": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "image": "https://auto-hammer-ufr.de/assets/img/news-tuev-rheinland.jpg"
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://auto-hammer-ufr.de/tuev-rheinland.html"
-  },
-  "headline": "Vom TÜV Rheinland für Servicequalität ausgezeichnet",
-  "description": "Der TÜV Rheinland hat unsere Servicequalität auditiert und uns ein Zertifikat ausgestellt.",
-  "datePublished": "2024-09-09",
-  "inLanguage": "de-DE",
-  "author": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png"
-    }
-  },
-  "image": "https://auto-hammer-ufr.de/assets/img/news-tuev-rheinland.jpg"
 }
 </script>
 <!-- daten:ende -->

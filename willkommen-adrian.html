@@ -167,54 +167,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aktuelles",
-      "item": "https://auto-hammer-ufr.de/aktuelles.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#seite",
+      "url": "https://auto-hammer-ufr.de/willkommen-adrian.html",
       "name": "Willkommen im Team, Adrian",
-      "item": "https://auto-hammer-ufr.de/willkommen-adrian.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Adrian Thiele hat bei Auto Hammer seine Ausbildung zum Kfz-Mechatroniker begonnen.",
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#meldung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aktuelles",
+          "item": "https://auto-hammer-ufr.de/aktuelles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Willkommen im Team, Adrian",
+          "item": "https://auto-hammer-ufr.de/willkommen-adrian.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#meldung",
+      "mainEntityOfPage": {
+        "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html#seite"
+      },
+      "headline": "Willkommen im Team, Adrian",
+      "description": "Adrian Thiele hat bei uns seine Ausbildung zum Kfz-Mechatroniker begonnen.",
+      "datePublished": "2026-09-07",
+      "inLanguage": "de-DE",
+      "author": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "publisher": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "image": "https://auto-hammer-ufr.de/assets/img/news-adrian-thiele.jpg"
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://auto-hammer-ufr.de/willkommen-adrian.html"
-  },
-  "headline": "Willkommen im Team, Adrian",
-  "description": "Adrian Thiele hat bei uns seine Ausbildung zum Kfz-Mechatroniker begonnen.",
-  "datePublished": "2026-09-07",
-  "inLanguage": "de-DE",
-  "author": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png"
-    }
-  },
-  "image": "https://auto-hammer-ufr.de/assets/img/news-adrian-thiele.jpg"
 }
 </script>
 <!-- daten:ende -->

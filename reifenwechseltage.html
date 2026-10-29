@@ -182,54 +182,83 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Aktuelles",
-      "item": "https://auto-hammer-ufr.de/aktuelles.html"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#seite",
+      "url": "https://auto-hammer-ufr.de/reifenwechseltage.html",
       "name": "Reifenwechseltage ohne Wartezeit",
-      "item": "https://auto-hammer-ufr.de/reifenwechseltage.html"
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "An zwei Samstagen wechseln wir Räder im Halbstundentakt. Termin vorher telefonisch reservieren, dann geht es ohne Wartezeit.",
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#meldung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Aktuelles",
+          "item": "https://auto-hammer-ufr.de/aktuelles.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reifenwechseltage ohne Wartezeit",
+          "item": "https://auto-hammer-ufr.de/reifenwechseltage.html"
+        }
+      ]
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#meldung",
+      "mainEntityOfPage": {
+        "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html#seite"
+      },
+      "headline": "Reifenwechseltage ohne Wartezeit",
+      "description": "An zwei Samstagen wechseln wir Räder im Halbstundentakt. Wer vorher anruft, ist ohne Wartezeit wieder unterwegs.",
+      "datePublished": "2026-10-01",
+      "inLanguage": "de-DE",
+      "author": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "publisher": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "image": "https://auto-hammer-ufr.de/assets/img/news-reifenwechsel.jpg"
     }
   ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://auto-hammer-ufr.de/reifenwechseltage.html"
-  },
-  "headline": "Reifenwechseltage ohne Wartezeit",
-  "description": "An zwei Samstagen wechseln wir Räder im Halbstundentakt. Wer vorher anruft, ist ohne Wartezeit wieder unterwegs.",
-  "datePublished": "2026-10-01",
-  "inLanguage": "de-DE",
-  "author": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Auto Hammer GmbH",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png"
-    }
-  },
-  "image": "https://auto-hammer-ufr.de/assets/img/news-reifenwechsel.jpg"
 }
 </script>
 <!-- daten:ende -->

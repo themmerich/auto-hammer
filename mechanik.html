@@ -220,19 +220,86 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Mechanik",
-      "item": "https://auto-hammer-ufr.de/mechanik.html"
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/mechanik.html#seite",
+      "url": "https://auto-hammer-ufr.de/mechanik.html",
+      "name": "Mechanik und Reparatur",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Reparatur, Fehlerdiagnose, Bremsen, Klimaservice, Reifen und Einlagerung für alle Marken. Kfz-Werkstatt in Rottendorf bei Würzburg.",
+      "about": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/mechanik.html#pfad"
+      },
+      "mainEntity": {
+        "@id": "https://auto-hammer-ufr.de/mechanik.html#leistung"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/mechanik.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Mechanik",
+          "item": "https://auto-hammer-ufr.de/mechanik.html"
+        }
+      ]
+    },
+    {
+      "@type": "Service",
+      "@id": "https://auto-hammer-ufr.de/mechanik.html#leistung",
+      "name": "Mechanik und Reparatur",
+      "serviceType": "Mechanik und Reparatur",
+      "description": "Reparatur, Fehlerdiagnose, Bremsen, Klimaservice, Reifen und Einlagerung für alle Marken. Kfz-Werkstatt in Rottendorf bei Würzburg.",
+      "url": "https://auto-hammer-ufr.de/mechanik.html",
+      "provider": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Rottendorf"
+        },
+        {
+          "@type": "City",
+          "name": "Würzburg"
+        },
+        {
+          "@type": "City",
+          "name": "Kitzingen"
+        }
+      ],
+      "image": "https://auto-hammer-ufr.de/assets/img/mechanik-diagnose.jpg"
     }
   ]
 }

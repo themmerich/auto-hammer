@@ -217,19 +217,57 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Startseite",
-      "item": "https://auto-hammer-ufr.de/"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Kontakt",
-      "item": "https://auto-hammer-ufr.de/kontakt.html"
+      "@type": "ContactPage",
+      "@id": "https://auto-hammer-ufr.de/kontakt.html#seite",
+      "url": "https://auto-hammer-ufr.de/kontakt.html",
+      "name": "Kontakt und Anfahrt",
+      "inLanguage": "de-DE",
+      "isPartOf": {
+        "@id": "https://auto-hammer-ufr.de/#website"
+      },
+      "description": "Auto Hammer in Rottendorf bei Würzburg: Telefon, Mail, Öffnungszeiten und Anfahrt. Zeppelinstr. 1, Mo–Do 07:30–16:30, Fr 07:30–15:15.",
+      "about": {
+        "@id": "https://auto-hammer-ufr.de/#betrieb"
+      },
+      "breadcrumb": {
+        "@id": "https://auto-hammer-ufr.de/kontakt.html#pfad"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://auto-hammer-ufr.de/kontakt.html#pfad",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Startseite",
+          "item": "https://auto-hammer-ufr.de/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Kontakt",
+          "item": "https://auto-hammer-ufr.de/kontakt.html"
+        }
+      ]
     }
   ]
 }

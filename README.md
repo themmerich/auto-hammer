@@ -147,11 +147,41 @@ Adresse, Titel, Beschreibung und Bild anpassen.
 
 ### Am Fuß jeder Seite
 
-Zwischen `<!-- daten:anfang -->` und `<!-- daten:ende -->` stehen
-strukturierte Daten als JSON-LD: der Brotkrumenpfad auf allen Unterseiten,
-dazu `BlogPosting` auf den Meldungen. Die `AutoRepair`-Angaben der
-Startseite mit Adresse, Telefon und Öffnungszeiten stehen separat und
-müssen mit dem Impressum übereinstimmen.
+Zwischen `<!-- daten:anfang -->` und `<!-- daten:ende -->` steht ein
+Graph aus JSON-LD. Jede Seite trägt darin drei bis vier Knoten:
+
+1. **Der Betrieb**, immer unter derselben Kennung
+   `https://auto-hammer-ufr.de/#betrieb`. Daran erkennt eine Maschine,
+   dass alle 34 Seiten von einem Betrieb handeln und nicht von 34
+   verschiedenen.
+2. **Die Seite selbst**, je nach Art `WebPage`, `CollectionPage`,
+   `ContactPage` oder `AboutPage`.
+3. **Der Brotkrumenpfad**, wo es einen gibt.
+4. **Die Sache, um die es geht**: `Service` auf den fünf
+   Leistungsseiten, `BlogPosting` auf den Meldungen, `ItemList` auf der
+   Leistungsübersicht.
+
+Die Startseite hat ihren Graphen von Hand, mit den vollständigen Angaben
+zum Betrieb: Adresse, Telefon, Öffnungszeiten, Gründungsjahr,
+Einzugsgebiet, Facebook-Seite und ein Katalog, der auf die fünf
+Leistungen verweist. Diese Angaben müssen mit dem Impressum
+übereinstimmen.
+
+Auf allen anderen Seiten steht vom Betrieb nur die Kurzfassung, damit
+jede Seite für sich lesbar bleibt. Beide tragen dieselbe Kennung und
+ergänzen sich dadurch, statt sich zu widersprechen.
+
+### Warum der Aufwand
+
+Suchmaschinen sind nicht mehr der einzige Weg. Immer mehr Leute fragen
+einen Assistenten, wo sie in der Gegend einen Unfallschaden reparieren
+lassen können. Was so ein Assistent über den Betrieb weiß, hängt davon
+ab, wie gut die Seite maschinell zu lesen ist: ein Betrieb statt 34,
+benannte Leistungen statt Überschriften, ein Einzugsgebiet statt
+Fließtext.
+
+`robots.txt` erlaubt allen Zugriffen alles. Das schließt die Crawler der
+KI-Anbieter ein. Wer das nicht will, muss sie dort einzeln ausschließen.
 
 ### Sitemap
 

@@ -354,31 +354,73 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "AutoRepair",
-  "name": "Auto Hammer GmbH",
-  "description": "Karosserie- und Lackierfachbetrieb in Rottendorf bei Würzburg.",
-  "telephone": "+49 9302 1030",
-  "email": "info@auto-hammer-ufr.de",
-  "url": "https://auto-hammer-ufr.de/",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Zeppelinstr. 1",
-    "postalCode": "97228",
-    "addressLocality": "Rottendorf",
-    "addressCountry": "DE"
-  },
-  "openingHoursSpecification": [
+  "@graph": [
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
-      "opens": "07:30",
-      "closes": "16:30"
+      "@type": "AutoRepair",
+      "@id": "https://auto-hammer-ufr.de/#betrieb",
+      "name": "Auto Hammer GmbH",
+      "description": "Karosserie- und Lackierfachbetrieb in Rottendorf bei Würzburg. Unfallinstandsetzung, Lackierung, Mechanik und Kundendienst für alle Marken.",
+      "url": "https://auto-hammer-ufr.de/",
+      "telephone": "+49 9302 1030",
+      "email": "info@auto-hammer-ufr.de",
+      "foundingDate": "1979",
+      "logo": "https://auto-hammer-ufr.de/assets/img/logo-auto-hammer-quer.png",
+      "image": "https://auto-hammer-ufr.de/assets/img/og.jpg",
+      "sameAs": ["https://www.facebook.com/autohammer.ufr"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Zeppelinstr. 1",
+        "postalCode": "97228",
+        "addressLocality": "Rottendorf",
+        "addressCountry": "DE"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Rottendorf" },
+        { "@type": "City", "name": "Würzburg" },
+        { "@type": "City", "name": "Kitzingen" }
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "07:30",
+          "closes": "16:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Friday",
+          "opens": "07:30",
+          "closes": "15:15"
+        }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Leistungen",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@id": "https://auto-hammer-ufr.de/unfall.html#leistung" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://auto-hammer-ufr.de/karosserie.html#leistung" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://auto-hammer-ufr.de/lackierung.html#leistung" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://auto-hammer-ufr.de/mechanik.html#leistung" } },
+          { "@type": "Offer", "itemOffered": { "@id": "https://auto-hammer-ufr.de/kundendienst.html#leistung" } }
+        ]
+      }
     },
     {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": "Friday",
-      "opens": "07:30",
-      "closes": "15:15"
+      "@type": "WebSite",
+      "@id": "https://auto-hammer-ufr.de/#website",
+      "url": "https://auto-hammer-ufr.de/",
+      "name": "Auto Hammer GmbH",
+      "inLanguage": "de-DE",
+      "publisher": { "@id": "https://auto-hammer-ufr.de/#betrieb" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://auto-hammer-ufr.de/#seite",
+      "url": "https://auto-hammer-ufr.de/",
+      "name": "Auto Hammer – Karosserie und Lack in Rottendorf bei Würzburg",
+      "isPartOf": { "@id": "https://auto-hammer-ufr.de/#website" },
+      "about": { "@id": "https://auto-hammer-ufr.de/#betrieb" },
+      "inLanguage": "de-DE"
     }
   ]
 }
